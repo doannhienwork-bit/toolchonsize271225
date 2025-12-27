@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNY Sport — Gợi ý size Đa Môn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+  <style>
+.required {
+    color: #ff4b4b;
+    margin-left: 2px;
+}
+.popup-close {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+.team-box {
+    position: relative;
+}
+
+
+.popup-info-btn {
+    position: absolute;
+    top: 6px;       
+    right: 6px;     
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 5;     
+}
+.hidden {
+  display: none !important;
+}
+
+
+.info-circle {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #ff4b4b;
+    border-radius: 50%;
+    color: #ff4b4b;
+    font-weight: 900;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+
+.popup-info-btn:hover .info-circle {
+    background: #ff4b4b;
+    color: #fff;
+}
+
+
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9990;
+}
+
+
+.popup-box {
+  background: #ffffff;
+  width: 92%;
+  max-width: 430px;
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  animation: fadeUp .25s ease;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popup-title {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #0b3954;
+}
+
+
+.popup-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.popup-section .icon {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.popup-section h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #06324b;
+}
+
+.popup-section p, .popup-section ul {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #0f172a;
+  line-height: 1.45;
+}
+
+.popup-section ul {
+  padding-left: 18px;
+}
+
+
+.popup-close {
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 12px;
+  border: none;
+  background: #1594c8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  background: #0b6c9b;
+}
+
+
+.guide-btn {
+  background: #eef5fb;
+  color: #06324b;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #d7e7f2;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.guide-btn:hover {
+  background: #dceaf5;
+}
+
+.btn i{
+  width:18px;
+  height:18px;
+  margin-right:6px;
+}
+
+.team-bottom-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+}
+
+.team-bottom-buttons .btn.small{
+  padding:10px 18px;
+  font-size:14px;
+}
+
+.team-bottom-buttons .danger{
+  background:#ff5b5b;
+  color:white;
+}
+
+    .illu-wrap{
+      text-align:center;
+      margin-bottom:14px;
+    }
+    .illu-wrap img{
+      max-width:300px;
+      width:100%;
+      height:auto;
+    }
+
+    :root{
+      --bg-page:#f3f7fc;
+      --pri:#1594c8;
+      --pri-dark:#0b6c9b;
+      --pill-bg:#f5fbff;
+      --pill-border:#cbd5f5;
+      --ink:#0f172a;
+    }
+    *{box-sizing:border-box}
+body{
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin:0;
+  background:var(--bg-page);
+  color:var(--ink);
+}
+
+    main{
+      max-width:1700px;
+      margin:26px auto;
+      padding:0 16px 26px;
+    }
+    .shell{
+      background:#fff;
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(15,23,42,.12);
+      padding:22px 22px 22px;
+      display:grid;
+      grid-template-columns:1.1fr 1.05fr .9fr;
+      gap:18px;
+    }
+    @media(max-width:960px){
+      .shell{grid-template-columns:1fr}
+    }
+    .card-left{
+      border-right:1px solid #e5edf7;
+      padding-right:18px;
+    }
+    .card-middle{
+      padding:0 18px;
+      border-right:1px solid #e5edf7;
+    }
+    @media(max-width:960px){
+      .card-left,
+      .card-middle{
+        border-right:none;
+        padding-right:0;
+        padding-left:0;
+      }
+    }
+    .card-right{}
+
+    label{font-weight:650;font-size:14px;display:block;margin:10px 0 6px}
+    input,select{
+      width:100%;
+      padding:12px 14px;
+      border:1px solid #d7e7f2;
+      border-radius:12px;
+      font-size:15px;
+      outline:none;
+    }
+    input::placeholder{color:#cbd5e1}
+    input:focus,select:focus{
+      border-color:var(--pri);
+      box-shadow:0 0 0 3px rgba(21,148,200,.14);
+    }
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:11px 20px;
+  border-radius:12px;
+  border:0;
+  cursor:pointer;
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight:900; 
+  font-size:15px;
+}
+
+    .btn-primary{
+      background:var(--pri);
+      color:#fff;
+    }
+    .btn-primary:hover{background:var(--pri-dark);}
+    .btn-ghost{
+      background:#eef5fb;
+      color:#06324b;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#ecfeff;
+      color:#06324b;
+      font-weight:800;
+      border:1px solid #c7f2ff;
+    }
+    .result{
+      border:2px dashed #cfe8fb;
+      border-radius:16px;
+      padding:14px 14px 12px;
+      background:#f4fbff;
+      margin-top:14px;
+    }
+    .size-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:44px;
+      height:40px;
+      border-radius:12px;
+      background:#0b1120;
+      color:#fff;
+      font-weight:900;
+      font-size:18px;
+      padding:0 10px;
+    }
+    .hint{font-size:13px;color:#0b3954;margin-top:6px}
+    .error{color:#b91c1c;font-weight:800;margin-top:8px}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+      font-size:14px;
+    }
+    th,td{
+      text-align:center;
+      padding:8px 6px;
+      border-bottom:1px solid #eef2f7;
+    }
+    th{
+      background:#f5fbff;
+      font-weight:700;
+    }
+    .subtitle{
+      color:#0b3954;
+      font-weight:800;
+      margin:4px 0 4px;
+    }
+    .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .note{
+      background:#fff8e1;
+      border:1px solid #fde68a;
+      color:#8a6d00;
+      border-radius:10px;
+      padding:8px 10px;
+      font-size:13px;
+      margin-top:10px;
+    }
+    tr.pick{background:#e7f5ff !important;}
+    tr.heightRow{background:#fef3c7 !important;}
+    .hidden{display:none}
+    .score{font-size:12px;color:#475569;margin-left:6px}
+    .suggestion-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:8px;
+    }
+    @media(max-width:767px){.suggestion-grid{grid-template-columns:1fr}}
+    .sugg-card{
+      background:#fff;
+      border-radius:10px;
+      border:1px solid #dbeafe;
+      padding:10px 12px;
+    }
+    .sugg-title{
+      font-size:13px;
+      font-weight:800;
+      color:#1e293b;
+      margin-bottom:4px;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .sugg-title span.label{
+      font-size:11px;
+      padding:2px 6px;
+      border-radius:999px;
+      background:#eff6ff;
+      color:#1d4ed8;
+    }
+    .sugg-body{font-size:13px;color:#0f172a}
+    .cut-main{font-weight:900;font-size:18px;color:#dc2626;margin-top:6px}
+    .cut-sub{font-size:12px;color:#475569;margin-top:2px}
+    .cut-cell{font-weight:800;color:#dc2626}
+
+    .mode-tabs{
+      display:flex;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .mode-pill{
+      flex:1;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 10px;
+      border-radius:999px;
+      border:2px solid var(--pill-border);
+      background:var(--pill-bg);
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.03em;
+      cursor:pointer;
+      color:#0f172a;
+    }
+    .mode-pill input{display:none;}
+    .mode-pill.active{
+      background:var(--pri);
+      border-color:var(--pri);
+      color:#fff;
+    }
+    .mode-pill span{pointer-events:none;}
+
+    .team-box{
+      border-radius:16px;
+      border:1px dashed #d4e4f7;
+      padding:10px 12px 6px;
+      margin-top:14px;
+      background:#f7fbff;
+    }
+    .team-title{font-weight:800;font-size:14px;margin-bottom:4px;color:#0b3954}
+    .team-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .team-table-wrap{
+      max-height:520px; 
+      overflow:auto;
+      margin-top:6px
+    }
+    .team-table-wrap table{font-size:13px}
+
+    .btn-del{
+      width:26px;
+      height:26px;
+      border-radius:999px;
+      border:1px solid #e2e8f0;
+      background:#fff;
+      cursor:pointer;
+      font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#475569;
+    }
+    .btn-del:hover{
+      background:#fee2e2;
+      border-color:#fecaca;
+      color:#b91c1c;
+    }
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div id="excelGuidePopup" class="popup-overlay">
+  <div class="popup-box">
+    
+    <h2 class="popup-title">📘 Hướng dẫn nhập Excel</h2>
+
+    <div class="popup-section">
+      <div class="icon">📥</div>
+      <div>
+        <h3>1. Tải Excel mẫu</h3>
+        <p>
+          Nhấn <b>“Tải Excel mẫu”</b> để lấy file chuẩn.  
+          Trong file, bạn chỉ cần điền:<br>
+        <ul>
+          <li>Tên & Số áo, Đối tượng, Số đo tương ứng  
+          (Dài áo – Ngực – Tay hoặc Cao – Nặng)</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="popup-section">
+      <div class="icon">📤</div>
+      <div>
+        <h3>2. Nhập từ Excel</h3>
+        <p>
+          Nhấn <b>“Nhập từ Excel”</b> → chọn file vừa điền.<br>
+
+          Hệ thống sẽ tự động:<br>
+        </p>
+        <ul>
+         <li> Đọc dữ liệu  →  Gợi ý size  →  Thêm vào danh sách đội</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="popup-section">
+      <div class="icon">💛</div>
+      <div>
+        <h3>Lưu ý nhỏ</h3>
+        <ul>
+          <li>Giữ nguyên tên các cột trong file mẫu.</li>
+          <li>Điền đủ thông tin quan trọng.</li>
+          <li>Chọn đúng chế độ: <b>Chọn theo thông số áo</b> hoặc <b>Chọn theo chiều cao & Cân nặng.</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="popup-close" onclick="closeGuide()">ĐÃ HIỂU</button>
+  </div>
+</div>
+<div id="shareGuidePopup" class="popup-overlay" style="display:none;">
+  <div class="popup-box">
+    <h2 class="popup-title">⚠️ Không thể chia sẻ file</h2>
+    <p style="font-size:15px; line-height:1.5; margin-top:8px;">
+      Thiết bị hoặc trình duyệt của bạn hiện không hỗ trợ<br>
+      <b>chia sẻ file Excel trực tiếp.</b><br><br>
+      Bạn có thể:
+      <br>• Bấm <b>Tải về</b> để lưu file Excel
+      <br>• Sau đó gửi file thủ công qua Zalo, Messenger hoặc Email<br><br>
+      <i>Gợi ý: Chức năng chia sẻ file thường hoạt động tốt trên thiết bị IOS (iPhone).</i>
+    </p>
+
+    <button class="popup-close" onclick="closeShareGuide()">Đã hiểu ✔</button>
+  </div>
+</div>
+
+<main>
+  <div class="shell">
+    <section class="card-left">
+      <div class="mode-tabs">
+        <label class="mode-pill active" id="pillMeasure">
+          <input type="radio" name="mode" value="measure" checked onchange="switchMode()">
+<div style="text-align:center;">
+    <span>Chọn theo thông số áo</span>
+</div>
+
+        </label>
+        <label class="mode-pill" id="pillBody">
+          <input type="radio" name="mode" value="body" onchange="switchMode()">
+          <div style="text-align:center;">
+            Chọn theo chiều cao<br>
+            &amp; cân nặng
+          </div>
+        </label>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="sport">Môn thể thao</label>
+          <select id="sport" onchange="handleSportChange()">
+            <option value="football" selected>Bóng đá (Tiêu chuẩn)</option>
+            <option value="baseball">Bóng chày (Form rộng/Unisex)</option>
+            </select>
+        </div>
+        <div>
+          <label for="gender">Đối tượng</label>
+          <select id="gender" onchange="toggleTables()">
+            <option value="male" selected>Nam</option>
+            <option value="female">Nữ</option>
+            <option value="kids">Trẻ em</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="measureBlock" style="margin-top:10px">
+        <div class="row">
+          <div>
+            <label for="len">Dài áo (cm) <span class="required">*</span></label>
+            <input id="len" inputmode="decimal" placeholder="VD: 70">
+          </div>
+          <div>
+            <label for="chest">Ngang ngực áo (cm) <span class="required">*</span></label>
+            <input id="chest" inputmode="decimal" placeholder="VD: 52">
+          </div>
+        </div>
+        <div class="row" style="margin-top:8px">
+          <div>
+            <label for="sleeve">Dài tay (cm)</label>
+            <input id="sleeve" inputmode="decimal" placeholder="VD: 22">
+          </div>
+        </div>
+      </div>
+
+      <div id="bodyBlock" class="hidden" style="margin-top:10px">
+<div class="row">
+  <div>
+    <label for="height">Chiều cao (cm) <span class="required">*</span></label>
+    <input id="height" inputmode="decimal" placeholder="VD: 172">
+  </div>
+  <div>
+    <label for="weight">Cân nặng (kg) <span class="required">*</span></label>
+    <input id="weight" inputmode="decimal" placeholder="VD: 68">
+  </div>
+</div>
+
+        <div class="hint">
+          Hệ thống sẽ <b>ưu tiên Cân nặng</b> để chọn size áo, sau đó đối chiếu chiều cao để gợi ý cắt/tăng lai.
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+  <div>
+    <label for="playerName">Tên cầu thủ</label>
+    <input id="playerName" placeholder="VD: Nguyễn Văn A">
+  </div>
+
+  <div>
+    <label for="playerNumber">Số áo (tuỳ chọn)</label>
+    <input id="playerNumber" inputmode="numeric" placeholder="VD: 10">
+  </div>
+</div>
+
+
+      <div class="flex" style="margin-top:14px">
+        <button class="btn btn-primary" type="button" onclick="handleSuggest()">
+          GỢI Ý SIZE
+        </button>
+        <button class="btn btn-ghost" type="button" onclick="clearAll()">Xoá</button>
+        <span id="adultSizes" class="pill">XS • S • M • L • XL • XXL • 3XL • 4XL...</span>
+        <span id="kidSizes" class="pill hidden">0 • 1 • 3 • 5 • 7 • 9 • 11 • 13</span>
+      </div>
+
+      <div id="kidNote" class="note hidden">
+        Trẻ em: có thể dùng cả 2 cách. Bảng size tham chiếu chủ yếu theo <b>cân nặng &amp; độ tuổi</b>.
+      </div>
+      <div id="unisexNote" class="note hidden">
+        <b>Lưu ý:</b> Bóng chày sử dụng form Unisex (Nam/Nữ chung bảng size).
+      </div>
+
+      <div id="err" class="error" style="display:none"></div>
+      <div id="result" class="result" style="display:none"></div>
+    </section>
+
+    <aside class="card-middle">
+      <div class="illu-wrap">
+        <img id="illuImg" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOVlza5Gb9QHNpItToKxqrQi6PgJ736i7ysHmmxXxX0sJC2M1YkiCKPuG_nySLYzCKq_FtNlgoDxPyegXTHqTBDdBudeff-QQiAnr62PLmzpc4Pizy8gWt4pgXIBShNqyApgo-lalLh2co2Uqjc6ReZO2pJyMSQevfWOdz3sVAPhD5J3NEi46Zp6rvfBE/s16000/MINH%20HOA.png" alt="Minh họa đo áo">
+      </div>
+
+      <div id="maleTblWrap">
+        <style>
+          .subtitle {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        </style>
+
+        <div id="tblTitleMale" class="subtitle" style="font-size:20px;">BẢNG THÔNG SỐ NAM</div>
+        <table aria-label="Bảng size Nam">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Cân nặng (kg)</th>
+              <th>Chiều cao (cm)</th>
+              <th>Dài áo</th>
+              <th>Ngang ngực</th>
+              <th>Dài tay</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyMale"></tbody>
+        </table>
+      </div>
+
+      <div id="femaleTblWrap" class="hidden">
+        <div class="subtitle" style="font-size:20px;">BẢNG THÔNG SỐ NỮ</div>
+        <table aria-label="Bảng size Nữ">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Kg tham khảo</th>
+              <th>Chiều cao (cm)</th>
+              <th>Dài áo</th>
+              <th>Ngang ngực</th>
+              <th>Ngang eo</th>
+              <th>Dài tay</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyFemale"></tbody>
+        </table>
+      </div>
+
+      <div id="kidTblWrap" class="hidden">
+        <div class="subtitle" style="font-size:20px;">BẢNG THÔNG SỐ TRẺ EM</div>
+        <table aria-label="Bảng size Trẻ em">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Kg tham khảo</th>
+              <th>Tuổi</th>
+              <th>Dài áo</th>
+              <th>Ngang ngực</th>
+              <th>Dài tay</th>
+            </tr>
+          </thead>
+          <tbody id="tableBodyKid"></tbody>
+        </table>
+      </div>
+
+      <p class="hint" style="margin-top:6px">
+        Dòng được chọn sẽ được highlight trong bảng. (Vàng: theo chiều cao, Xanh: theo Size chốt).
+      </p>
+    </aside>
+
+    <aside class="card-right">
+      <div class="team-box">
+<button class="popup-info-btn" onclick="openGuide()">
+  <span class="info-circle">!</span>
+</button>
+<div class="team-title" style="font-size:20px;">DANH SÁCH ĐỘI</div>
+        <div class="hint">
+          Mỗi lần bấm <b>“Gợi ý size”</b>, hệ thống sẽ tự thêm 1 dòng vào bảng.
+        </div>
+        <div class="team-actions">
+          <button class="btn btn-ghost" type="button" onclick="downloadExcelTemplate()">Tải Excel mẫu <i data-lucide="file-down" style="width:20px; height:20px;"></i></button>
+          <button class="btn btn-ghost" type="button" onclick="document.getElementById('importExcel').click()">Nhập từ Excel <i data-lucide="file-up" style="width:20px; height:20px;"></i></button>
+          <input
+            type="file"
+            id="importExcel"
+            accept=".xlsx,.xls"
+            style="display:none"
+            onchange="handleImportExcel(event)">
+        </div>
+
+        <div class="team-table-wrap">
+          <table>
+            <thead id="teamHead"></thead>
+            <tbody id="teamTableBody"></tbody>
+          </table>
+        </div>  <div class="team-bottom-buttons">
+  <button class="btn small danger" onclick="clearTeam()">Xóa danh sách đội</button>
+
+  <button class="btn small" onclick="downloadCSV()">
+    Tải về <i data-lucide="download" style="width:20px; height:20px;"></i>
+  </button>
+
+<button id="shareButton" class="btn small hidden" onclick="shareExcel()">
+  Chia sẻ <i data-lucide="share-2" style="width:20px; height:20px;"></i>
+</button>
+
+
+</div>
+
+
+      </div>
+    </aside>
+  </div>
+</main>
+
+<script>
+
+  // ================= CẤU HÌNH HÌNH ẢNH =================
+  // Bạn thay thế link ảnh bóng chày vào bên dưới nhé
+  const IMG_MAP = {
+      football: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOVlza5Gb9QHNpItToKxqrQi6PgJ736i7ysHmmxXxX0sJC2M1YkiCKPuG_nySLYzCKq_FtNlgoDxPyegXTHqTBDdBudeff-QQiAnr62PLmzpc4Pizy8gWt4pgXIBShNqyApgo-lalLh2co2Uqjc6ReZO2pJyMSQevfWOdz3sVAPhD5J3NEi46Zp6rvfBE/s16000/MINH%20HOA.png",
+      baseball: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOVlza5Gb9QHNpItToKxqrQi6PgJ736i7ysHmmxXxX0sJC2M1YkiCKPuG_nySLYzCKq_FtNlgoDxPyegXTHqTBDdBudeff-QQiAnr62PLmzpc4Pizy8gWt4pgXIBShNqyApgo-lalLh2co2Uqjc6ReZO2pJyMSQevfWOdz3sVAPhD5J3NEi46Zp6rvfBE/s16000/MINH%20HOA.png" // <--- THAY LINK ẢNH BÓNG CHÀY VÀO ĐÂY
+  };
+  
+  // ================= DỮ LIỆU GỐC (BÓNG ĐÁ / TIÊU CHUẨN) =================
+  const SOCCER_MALE = [
+    {code:"XS",  w:[0,50],   h:[0,145],   len:59,   chest:43.5, sleeve:22},
+    {code:"S",   w:[50,55],  h:[145,155], len:62.5, chest:45.5, sleeve:22.5},
+    {code:"M",   w:[55,60],  h:[155,160], len:66,   chest:47.5, sleeve:23},
+    {code:"L",   w:[60,65],  h:[155,165], len:69,   chest:49.5, sleeve:23.5},
+    {code:"XL",  w:[65,70],  h:[160,170], len:72,   chest:51.5, sleeve:24},
+    {code:"2XL", w:[70,75],  h:[160,175], len:74,   chest:53.5, sleeve:24.5}, 
+    {code:"3XL", w:[75,80],  h:[165,180], len:75.5, chest:55.5, sleeve:25},
+    {code:"4XL", w:[80,85],  h:[165,185], len:77,   chest:57.5, sleeve:25.5},
+    {code:"5XL", w:[85,90],  h:[165,190], len:78,   chest:59.5, sleeve:25.5},
+    {code:"6XL", w:[90,95],  h:[165,195], len:79,   chest:61.5, sleeve:25.5},
+    {code:"7XL", w:[95,100], h:[165,200], len:80,   chest:63.5, sleeve:25.5},
+    {code:"8XL", w:[100,130],h:[165,210], len:81,   chest:65.5, sleeve:25.5},
+  ];
+
+  // ================= DỮ LIỆU NỮ (ĐÃ CẬP NHẬT THEO ẢNH MỚI) =================
+  const SOCCER_FEMALE = [
+    {code:"XS", w:[39,43], h:[149,153], len:52, chest:42, waist:39, sleeve:15},
+    {code:"S",  w:[43,46], h:[149,155], len:55.5, chest:44, waist:41, sleeve:16},
+    {code:"M",  w:[46,53], h:[149,159], len:59, chest:46, waist:43, sleeve:17},
+    {code:"L",  w:[53,57], h:[155,162], len:62, chest:48, waist:45, sleeve:18},
+    {code:"XL", w:[57,63], h:[155,170], len:65, chest:50, waist:47, sleeve:19},
+    {code:"XXL",w:[63,67], h:[162,173], len:68, chest:52, waist:49, sleeve:20},
+    {code:"3XL",w:[67,73], h:[162,177], len:71, chest:54, waist:51, sleeve:21},
+    {code:"4XL",w:[73,77], h:[162,180], len:74, chest:56, waist:53, sleeve:22},
+    // Giữ lại 5XL, 6XL làm dự phòng cho size lớn hơn
+    {code:"5XL",w:[77,85], h:[162,185], len:77, chest:58, waist:55, sleeve:23},
+    {code:"6XL",w:[85,100],h:[162,190], len:80, chest:60, waist:57, sleeve:24},
+  ];
+
+  // ================= DỮ LIỆU BÓNG CHÀY (MỚI) =================
+  const BASEBALL_UNISEX = [
+    {code:"S",   w:[50,55],  h:[145,155], len:68, chest:53.5, sleeve:24},
+    {code:"M",   w:[55,60],  h:[155,160], len:71, chest:55.5, sleeve:25},
+    {code:"L",   w:[60,65],  h:[155,165], len:74, chest:57.5, sleeve:26},
+    {code:"XL",  w:[65,70],  h:[160,170], len:77, chest:59.5, sleeve:27},
+    {code:"2XL", w:[70,75],  h:[160,175], len:80, chest:61.5, sleeve:27}, 
+    {code:"3XL", w:[75,80],  h:[165,180], len:83, chest:63.5, sleeve:28},
+    {code:"4XL", w:[80,130], h:[165,210], len:86, chest:65.5, sleeve:29}, 
+  ];
+
+  const KIDS=[
+    {code:"0", w:[0,10],   age:"1",      len:39.5, chest:29, sleeve:11},
+    {code:"1", w:[10,15],  age:"1–2",    len:42,   chest:31, sleeve:12},
+    {code:"3", w:[15,20],  age:"2–3",    len:44.5, chest:33, sleeve:13},
+    {code:"5", w:[20,25],  age:"4–5",    len:47.5, chest:35, sleeve:14},
+    {code:"7", w:[25,30],  age:"6–7",    len:50.5, chest:37, sleeve:15},
+    {code:"9", w:[30,35],  age:"8–9",    len:53.5, chest:39, sleeve:16},
+    {code:"11",w:[35,40],  age:"10–11",  len:56.5, chest:41, sleeve:17},
+    {code:"13",w:[40,45],  age:"Trên 11",len:58.5, chest:43, sleeve:18},
+  ];
+
+  // CẤU TRÚC DỮ LIỆU TỔNG HỢP
+  // Các môn chưa có data riêng sẽ dùng chung bảng Football (Tiêu chuẩn)
+  const DATA = {
+      football:   { male: SOCCER_MALE, female: SOCCER_FEMALE, kids: KIDS },
+      baseball:   { male: BASEBALL_UNISEX, female: BASEBALL_UNISEX, kids: KIDS }, // Baseball là unisex
+      volleyball: { male: SOCCER_MALE, female: SOCCER_FEMALE, kids: KIDS },
+      basketball: { male: SOCCER_MALE, female: SOCCER_FEMALE, kids: KIDS },
+      running:    { male: SOCCER_MALE, female: SOCCER_FEMALE, kids: KIDS },
+      badminton:  { male: SOCCER_MALE, female: SOCCER_FEMALE, kids: KIDS }
+  };
+
+  const $ = id => document.getElementById(id);
+
+  function getCurrentData() {
+      const sport = $("sport").value;
+      const gender = $("gender").value;
+      
+      // Nếu không tìm thấy môn, trả về bóng đá mặc định
+      const sportData = DATA[sport] || DATA['football'];
+      
+      if (gender === 'kids') return sportData.kids;
+      if (gender === 'female') return sportData.female;
+      return sportData.male;
+  }
+  
+  function renderMale(){
+    const sport = $("sport").value;
+    const tableData = DATA[sport] ? DATA[sport].male : SOCCER_MALE;
+    const isBaseball = sport === 'baseball';
+
+    $("tableBodyMale").innerHTML = tableData.map(r=>{
+      let wStr = `${r.w[0]}–${r.w[1]}`;
+      let hStr = `${r.h[0]}–${r.h[1]}`;
+
+      // Logic hiển thị giống ảnh gốc
+      if(r.code === "XS") { 
+          wStr = "< 50"; 
+          hStr = "< 145"; 
+      }
+      else if(r.code === "4XL" && isBaseball) { wStr = "> 80"; hStr = "> 165"; }
+      else if(r.code === "5XL") { wStr = "> 85"; hStr = ""; }
+      else if(r.code === "6XL") { wStr = "> 90"; hStr = ""; }
+      else if(r.code === "7XL") { wStr = "> 95"; hStr = ""; }
+      else if(r.code === "8XL") { wStr = "> 100"; hStr = ""; }
+
+      return `<tr>
+        <td><b>${r.code}</b></td>
+        <td>${wStr}</td>
+        <td>${hStr}</td>
+        <td>${r.len}</td>
+        <td>${r.chest}</td>
+        <td>${r.sleeve}</td>
+      </tr>`;
+    }).join("");
+  }
+
+  function renderFemale(){
+    const sport = $("sport").value;
+    const tableData = DATA[sport] ? DATA[sport].female : SOCCER_FEMALE;
+    
+    // Nếu là Baseball (Unisex), cấu trúc bảng Nữ sẽ giống bảng Nam (không có eo)
+    // Nhưng UI vẫn cần render để tránh lỗi, ta sẽ render kiểu đơn giản
+    if(sport === 'baseball') {
+        $("tableBodyFemale").innerHTML = tableData.map(r=>`
+          <tr>
+            <td><b>${r.code}</b></td>
+            <td>${r.w[0]}–${r.w[1]}</td>
+            <td>${r.h[0]}–${r.h[1]}</td>
+            <td>${r.len}</td>
+            <td>${r.chest}</td>
+            <td>—</td>
+            <td>${r.sleeve}</td>
+          </tr>`).join("");
+    } else {
+        $("tableBodyFemale").innerHTML = tableData.map(r=>`
+          <tr>
+            <td><b>${r.code}</b></td>
+            <td>${r.w[0]}–${r.w[1]}</td>
+            <td>${r.h[0]}–${r.h[1]}</td>
+            <td>${r.len}</td>
+            <td>${r.chest}</td>
+            <td>${r.waist}</td>
+            <td>${r.sleeve}</td>
+          </tr>`).join("");
+    }
+  }
+  function renderKids(){
+    // Kids thường dùng chung
+    const sport = $("sport").value;
+    const tableData = DATA[sport] ? DATA[sport].kids : KIDS;
+
+    $("tableBodyKid").innerHTML = tableData.map(r=>{
+      let wStr = `${r.w[0]}–${r.w[1]}`;
+      if(r.code === "0") wStr = "< 10"; // Custom display for Size 0
+      return `
+      <tr>
+        <td><b>${r.code}</b></td>
+        <td>${wStr}</td>
+        <td>${r.age}</td>
+        <td>${r.len}</td>
+        <td>${r.chest}</td>
+        <td>${r.sleeve}</td>
+      </tr>`
+    }).join("");
+  }
+  
+  function handleSportChange() {
+      const sport = $("sport").value;
+      const gender = $("gender").value;
+      const maleTitle = $("tblTitleMale");
+      const unisexNote = $("unisexNote");
+      const illu = $("illuImg");
+      
+      // === LOGIC MỚI: ĐỔI HÌNH MINH HỌA ===
+      if(IMG_MAP[sport]) {
+          illu.src = IMG_MAP[sport];
+      } else {
+          illu.src = IMG_MAP['football']; // Mặc định
+      }
+
+      // Cập nhật tiêu đề bảng
+      if (sport === 'baseball') {
+          maleTitle.textContent = "BẢNG THÔNG SỐ UNISEX (BÓNG CHÀY)";
+          unisexNote.classList.remove("hidden");
+      } else {
+          maleTitle.textContent = "BẢNG THÔNG SỐ NAM";
+          unisexNote.classList.add("hidden");
+      }
+
+      // Nếu đang chọn Nữ mà chuyển sang Baseball -> Tự động chuyển view về bảng Nam (Unisex) để dễ nhìn
+      if (sport === 'baseball' && gender === 'female') {
+          // Vẫn giữ value gender là female để logic gợi ý hoạt động, nhưng hiển thị bảng Unisex
+          $("maleTblWrap").classList.remove("hidden");
+          $("femaleTblWrap").classList.add("hidden");
+      } else {
+          toggleTables(); // Reset view bình thường
+      }
+
+      // Render lại dữ liệu bảng
+      renderMale();
+      renderFemale();
+      renderKids();
+      
+      // Xóa kết quả cũ
+      clearAll();
+  }
+
+  // Khởi tạo
+  renderMale(); renderFemale(); renderKids();
+
+  
+function parseNum(x){
+  if (x == null) return NaN;
+  x = String(x)
+        .replace(/[^\d,\.\-]/g, "")
+        .replace(",", ".")
+        .trim();
+  if (x === "") return NaN;   
+  return Number(x);
+}
+
+  function toggleTables(){
+    const g = $("gender").value;
+    const sport = $("sport").value;
+    
+    // Logic đặc biệt cho bóng chày (Unisex)
+    if (sport === 'baseball') {
+        if (g === 'kids') {
+             $("maleTblWrap").classList.add("hidden");
+             $("femaleTblWrap").classList.add("hidden");
+             $("kidTblWrap").classList.remove("hidden");
+             $("kidNote").classList.remove("hidden");
+        } else {
+             // Nam hay Nữ bóng chày đều hiện bảng Male (Unisex)
+             $("maleTblWrap").classList.remove("hidden");
+             $("femaleTblWrap").classList.add("hidden");
+             $("kidTblWrap").classList.add("hidden");
+             $("kidNote").classList.add("hidden");
+        }
+    } else {
+        // Các môn khác phân chia bình thường
+        $("maleTblWrap").classList.toggle("hidden", g!=="male");
+        $("femaleTblWrap").classList.toggle("hidden", g!=="female");
+        $("kidTblWrap").classList.toggle("hidden", g!=="kids");
+        $("kidNote").classList.toggle("hidden", g!=="kids");
+    }
+
+    $("adultSizes").classList.toggle("hidden", g==="kids");
+    $("kidSizes").classList.toggle("hidden", g!=="kids");
+
+    // Đảm bảo ảnh đúng khi toggle bảng
+    const illu = $("illuImg");
+    if(IMG_MAP[sport]) illu.src = IMG_MAP[sport];
+
+    clearAll();
+  }
+  function clearHighlight(){
+    document.querySelectorAll("tbody tr").forEach(tr=>tr.classList.remove("pick","heightRow"));
+  }
+
+  function switchMode(){
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+    $("measureBlock").classList.toggle("hidden", mode!=="measure");
+    $("bodyBlock").classList.toggle("hidden", mode!=="body");
+    $("pillMeasure").classList.toggle("active", mode==="measure");
+    $("pillBody").classList.toggle("active", mode==="body");
+    $("err").style.display="none";
+    $("result").style.display="none";
+    renderTeamTable();
+  }
+
+  
+  function calcSuggestions(len, chest, sleeve, table){
+    let bestOverall={idx:-1,score:Infinity};
+    let bestChest={idx:-1,score:Infinity};
+
+    table.forEach((s,i)=>{
+      let chestScore = (!Number.isNaN(chest) && typeof s.chest==="number")
+        ? Math.pow(chest - s.chest,2) : NaN;
+      let lenScore   = (!Number.isNaN(len) && typeof s.len==="number")
+        ? Math.pow(len - s.len,2) : NaN;
+      let sleeveScore= (!Number.isNaN(sleeve) && typeof s.sleeve==="number")
+        ? Math.pow(sleeve - s.sleeve,2) : NaN;
+
+      let scoreOverall=0, hasAny=false;
+      if(!Number.isNaN(chestScore)){scoreOverall+=1.0*chestScore; hasAny=true;}
+      if(!Number.isNaN(lenScore)){scoreOverall+=1.0*lenScore; hasAny=true;}
+      if(!Number.isNaN(sleeveScore)){scoreOverall+=0.2*sleeveScore; hasAny=true;}
+      if(!hasAny) return;
+      scoreOverall += 0.01*Math.pow(i - table.length/2,2);
+
+      if(scoreOverall<bestOverall.score){bestOverall={idx:i,score:scoreOverall};}
+      if(!Number.isNaN(chestScore) && chestScore<bestChest.score){bestChest={idx:i,score:chestScore};}
+    });
+
+    return {
+      overall: bestOverall.idx>=0 ? bestOverall : null,
+      chest: bestChest.idx>=0 ? bestChest : null,
+    };
+  }
+
+  function renderMeasureResult(len, chest, sleeve, table, selector, whoLabel){
+    const err = $("err"), out = $("result");
+
+    if (Number.isNaN(len) || Number.isNaN(chest)) {
+      err.textContent = "Vui lòng nhập đầy đủ Dài áo và Ngang ngực.";
+      err.style.display = "block";
+      out.style.display = "none";
+      return false;
+    }
+
+    const sugg = calcSuggestions(len, chest, sleeve, table);
+    if(!sugg.overall){
+      err.textContent = "Không đủ dữ liệu để gợi ý size.";
+      err.style.display = "block";
+      out.style.display = "none";
+      return false;
+    }
+
+    const overallIdx = sugg.overall.idx;
+    const chestIdx   = sugg.chest?.idx ?? null;
+
+    clearHighlight();
+    const tb = document.querySelector(selector);
+    if(tb && tb.children[overallIdx]) tb.children[overallIdx].classList.add("pick");
+
+    const pOverall = table[overallIdx];
+    const pChest   = chestIdx!=null ? table[chestIdx] : null;
+
+    const user = { len, chest, sleeve };
+
+    let cutDelta = null;
+    if(pChest && !Number.isNaN(len) && typeof pChest.len==="number"){
+      cutDelta = pChest.len - len;
+    }
+
+    let cutMainText = "";
+    let cutSubText = "";
+    if(pChest && cutDelta !== null){
+      if(Math.abs(cutDelta) <= 1){
+        cutMainText = "Không cần cắt/tăng lai";
+        cutSubText = "Dài áo size tuỳ chỉnh gần giống áo mẫu.";
+      } else if(cutDelta > 1){
+        cutMainText = `Cắt lai ${cutDelta.toFixed(1)}cm`;
+        cutSubText = `Áo chuẩn size ${pChest.code} dài hơn áo mẫu, cắt bớt để ra độ dài tương đương.`;
+      } else {
+        cutMainText = `Tăng lai ~${Math.abs(cutDelta).toFixed(1)}cm`;
+        cutSubText = `Size ${pChest.code} ngắn hơn áo mẫu, cần may dài hơn/tăng lai nếu muốn giống áo mẫu.`;
+      }
+    }
+
+    const rowOverall = `
+      <div class="sugg-card">
+        <div class="sugg-title">
+          <span class="label">1</span> <b>Size đề xuất</b>
+        </div>
+        <div class="sugg-body">
+          <div>Size đề xuất: <span class="size-badge">${pOverall.code}</span></div>
+          <div class="hint score">
+            Điểm khớp tổng thể (dài áo + ngang ngực + tay): <b>${sugg.overall.score.toFixed(1)}</b> (càng thấp càng tốt)
+          </div>
+        </div>
+      </div>
+    `;
+
+    const rowChestCut = `
+      <div class="sugg-card">
+        <div class="sugg-title">
+          <span class="label">2</span> <b>Size tuỳ chỉnh</b>
+        </div>
+        <div class="sugg-body">
+          ${
+            pChest
+            ? `
+              <div>Size tuỳ chỉnh: <span class="size-badge">${pChest.code}</span></div>
+              ${
+                cutMainText
+                  ? `<div class="cut-main">${cutMainText}</div>
+                     <div class="cut-sub">${cutSubText}</div>`
+                  : `<div class="hint">Cần nhập dài áo để gợi ý cắt/tăng lai.</div>`
+              }
+            `
+            : "Cần có số đo ngang ngực (và tốt nhất có thêm dài áo) để đưa gợi ý Size tuỳ chỉnh."
+          }
+        </div>
+      </div>
+    `;
+
+    const compareTable = `
+      <div class="subtitle" style="margin-top:12px">So sánh số đo áo (theo Size đề xuất &amp; Size tuỳ chỉnh)</div>
+      <table style="margin-top:6px;font-size:13px">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Áo khách đo</th>
+            <th>Chuẩn size ${pOverall.code}</th>
+            <th>${pChest ? "Size " + pChest.code + " tuỳ chỉnh" : "Size tuỳ chỉnh"}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Dài áo</b></td>
+            <td>${Number.isNaN(user.len) ? "—" : user.len.toFixed(1)+"cm"}</td>
+            <td>${typeof pOverall.len==="number" ? pOverall.len+"cm" : "—"}</td>
+            <td>
+              ${
+                pChest && typeof pChest.len==="number"
+                ? (() => {
+                    const base = pChest.len.toFixed(1)+"cm";
+                    if(cutDelta===null || Math.abs(cutDelta)<=1) return base;
+                    const adj = -cutDelta;
+                    const sign = adj>0 ? "+" : "";
+                    return base+`<br><span class="cut-cell">${sign}${adj.toFixed(1)}cm</span>`;
+                  })()
+                : "—"
+              }
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ngang ngực</b></td>
+            <td>${Number.isNaN(user.chest) ? "—" : user.chest.toFixed(1)+"cm"}</td>
+            <td>${typeof pOverall.chest==="number" ? pOverall.chest+"cm" : "—"}</td>
+            <td>${pChest && typeof pChest.chest==="number" ? pChest.chest+"cm" : "—"}</td>
+          </tr>
+          <tr>
+            <td><b>Dài tay</b></td>
+            <td>${Number.isNaN(user.sleeve) ? "—" : user.sleeve.toFixed(1)+"cm"}</td>
+            <td>${typeof pOverall.sleeve==="number" ? pOverall.sleeve+"cm" : "—"}</td>
+            <td>${pChest && typeof pChest.sleeve==="number" ? pChest.sleeve+"cm" : "—"}</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+
+    err.style.display="none";
+    out.style.display="block";
+    out.innerHTML = `
+      <div class="hint">Kết quả gợi ý (${whoLabel}) — 2 size + bảng so sánh số đo.</div>
+      <div class="suggestion-grid">
+        ${rowOverall}
+        ${rowChestCut}
+      </div>
+      ${compareTable}
+    `;
+    return true;
+  }
+
+  function renderKidsMeasure(len, chest, sleeve){
+    // Lấy bảng kids theo sport hiện tại
+    const currentKidsTable = getCurrentData(); 
+    
+    const err=$("err"), out=$("result");
+
+    if(Number.isNaN(len) && Number.isNaN(chest) && Number.isNaN(sleeve)){
+      err.textContent="Nhập ít nhất 1 trong 3 số đo áo của bé.";
+      err.style.display="block"; out.style.display="none"; return false;
+    }
+
+    const sugg = calcSuggestions(len, chest, sleeve, currentKidsTable);
+    if(!sugg.overall){
+      err.textContent="Không đủ dữ liệu để gợi ý size.";
+      err.style.display="block"; out.style.display="none"; return false;
+    }
+
+    const overallIdx = sugg.overall.idx;
+    const chestIdx   = sugg.chest?.idx ?? null;
+
+    clearHighlight();
+    const tb = document.querySelector("#tableBodyKid");
+    if(tb && tb.children[overallIdx]) tb.children[overallIdx].classList.add("pick");
+
+    const pOverall = currentKidsTable[overallIdx];
+    const pChest   = chestIdx!=null ? currentKidsTable[chestIdx] : null;
+    const user = { len, chest, sleeve };
+
+    let cutDelta=null;
+    if(pChest && !Number.isNaN(len) && typeof pChest.len==="number"){
+      cutDelta = pChest.len - len;
+    }
+    let cutMainText="", cutSubText="";
+    if(pChest && cutDelta!==null){
+      if(Math.abs(cutDelta)<=1){
+        cutMainText="Không cần cắt/tăng lai";
+        cutSubText="Dài áo size tuỳ chỉnh gần giống áo bé đang mặc.";
+      } else if(cutDelta>1){
+        cutMainText=`Cắt lai ${cutDelta.toFixed(1)}cm`;
+        cutSubText=`Áo chuẩn size ${pChest.code} dài hơn áo mẫu, có thể cắt bớt cho bé.`;
+      } else {
+        cutMainText=`Tăng lai ~${Math.abs(cutDelta).toFixed(1)}cm`;
+        cutSubText=`Size ${pChest.code} ngắn hơn áo mẫu, cần may dài hơn nếu phụ huynh muốn giữ độ dài.`;
+      }
+    }
+
+    const rowOverall = `
+      <div class="sugg-card">
+        <div class="sugg-title">
+          <span class="label">1</span> <b>Size đề xuất</b>
+        </div>
+        <div class="sugg-body">
+          <div>Size đề xuất: <span class="size-badge">${pOverall.code}</span></div>
+          <div class="hint score">Điểm khớp tổng thể: <b>${sugg.overall.score.toFixed(1)}</b></div>
+        </div>
+      </div>
+    `;
+    const rowChestCut = `
+      <div class="sugg-card">
+        <div class="sugg-title">
+          <span class="label">2</span> <b>Size tuỳ chỉnh</b></div>
+        <div class="sugg-body">
+          ${
+            pChest
+            ? `
+              <div>Size tuỳ chỉnh: <span class="size-badge">${pChest.code}</span></div>
+              ${
+                cutMainText
+                  ? `<div class="cut-main">${cutMainText}</div>
+                     <div class="cut-sub">${cutSubText}</div>`
+                  : `<div class="hint">Cần nhập dài áo để gợi ý cắt/tăng lai.</div>`
+              }
+            `
+            : "Cần có số đo ngang ngực (và tốt nhất có thêm dài áo) để gợi ý Size tuỳ chỉnh."
+          }
+        </div>
+      </div>
+    `;
+    const compareTable = `
+      <div class="subtitle" style="margin-top:12px">So sánh số đo áo (theo Size đề xuất &amp; Size tuỳ chỉnh)</div>
+      <table style="margin-top:6px;font-size:13px">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Áo khách đo</th>
+            <th>Chuẩn size ${pOverall.code}</th>
+            <th>${pChest ? "Size " + pChest.code + " tuỳ chỉnh" : "Size tuỳ chỉnh"}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Dài áo</b></td>
+            <td>${Number.isNaN(user.len) ? "—" : user.len.toFixed(1)+"cm"}</td>
+            <td>${pOverall.len}cm</td>
+            <td>
+              ${
+                pChest
+                ? (() => {
+                    const base = pChest.len.toFixed(1)+"cm";
+                    if(cutDelta===null || Math.abs(cutDelta)<=1) return base;
+                    const adj = -cutDelta;
+                    const sign = adj>0 ? "+" : "";
+                    return base+`<br><span class="cut-cell">${sign}${adj.toFixed(1)}cm</span>`;
+                  })()
+                : "—"
+              }
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ngang ngực</b></td>
+            <td>${Number.isNaN(user.chest) ? "—" : user.chest.toFixed(1)+"cm"}</td>
+            <td>${pOverall.chest}cm</td>
+            <td>${pChest ? pChest.chest+"cm" : "—"}</td>
+          </tr>
+          <tr>
+            <td><b>Dài tay</b></td>
+            <td>${Number.isNaN(user.sleeve) ? "—" : user.sleeve.toFixed(1)+"cm"}</td>
+            <td>${pOverall.sleeve}cm</td>
+            <td>${pChest ? pChest.sleeve+"cm" : "—"}</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+
+    err.style.display="none";
+    out.style.display="block";
+    out.innerHTML = `
+      <div class="hint">Kết quả gợi ý (Trẻ em) — 2 size + bảng so sánh số đo.</div>
+      <div class="suggestion-grid">
+        ${rowOverall}
+        ${rowChestCut}
+      </div>
+      ${compareTable}
+    `;
+    return true;
+  }
+
+  function suggestByMeasure(){
+    const g = $("gender").value;
+    const sport = $("sport").value;
+    const len = parseNum($("len").value);
+    const chest = parseNum($("chest").value);
+    const sleeve = parseNum($("sleeve").value);
+
+    // Lấy bảng data hiện tại
+    const table = getCurrentData();
+
+    if(g==="kids"){
+      return renderKidsMeasure(len, chest, sleeve);
+    } 
+    
+    // Nếu là Bóng chày, luôn dùng bảng Unisex (hiển thị ở vị trí bảng Male)
+    if(sport === 'baseball') {
+        return renderMeasureResult(len, chest, sleeve, table, "#tableBodyMale", "Unisex/Bóng chày");
+    }
+
+    if(g==="male"){
+      return renderMeasureResult(len, chest, sleeve, table, "#tableBodyMale", "Nam");
+    } else {
+      return renderMeasureResult(len, chest, sleeve, table, "#tableBodyFemale", "Nữ");
+    }
+  }
+
+  
+  function inRange(v,[a,b]){ return v>=a && v<=b; }
+  function distToRange(v,[a,b]){ if(v<a) return a-v; if(v>b) return v-b; return 0; }
+  function width(range){ const [a,b]=range; return Math.max(1e-9, b-a); }
+
+  function findNearestByRange(value, table, key, direction='max'){
+    let bestIdx=-1, bestDist=Infinity;
+    table.forEach((s,i)=>{
+      const d = distToRange(value, s[key]);
+      if (d < bestDist) {
+        bestDist = d;
+        bestIdx = i;
+      } else if (d === bestDist) {
+        if (direction === 'max') {
+           bestIdx = i; 
+        } 
+      }
+    });
+    return bestIdx;
+  }
+
+  function calculateBMI(w, h_cm) {
+    let h_m = h_cm / 100;
+    return w / (h_m * h_m);
+  }
+
+  function getBMICategory(bmi) {
+    if (bmi < 19) return 'skinny';
+    if (bmi <= 24) return 'standard';
+    return 'heavy';
+  }
+
+  function solveSizeAdult(h, w, table) {
+    const bmi = calculateBMI(w, h);
+    const shape = getBMICategory(bmi);
+    
+    let idxH = findNearestByRange(h, table, 'h', 'min');
+    let idxW = findNearestByRange(w, table, 'w', 'max');
+    
+    let finalIdx = -1;
+    let logicExplain = "";
+    let shapeLabel = "";
+
+    if (shape === 'skinny') {
+       shapeLabel = "Dáng gầy / cao gầy (BMI < 19)";
+       finalIdx = idxH;
+       
+       let sizeH = table[idxH];
+       let minW = sizeH.w[0];
+       if (w < minW - 3) {
+          let newIdx = Math.max(0, idxH - 1);
+          if (newIdx !== idxH) {
+             finalIdx = newIdx;
+             logicExplain = `Ưu tiên chiều cao (Size ${sizeH.code}), nhưng do cân nặng thấp hơn chuẩn > 3kg nên lùi 1 size để vừa vặn hơn.`;
+          } else {
+             logicExplain = `Chọn theo chiều cao.`;
+          }
+       } else {
+          logicExplain = `Chọn theo chiều cao.`;
+       }
+
+    } else if (shape === 'standard') {
+       shapeLabel = "Dáng chuẩn (BMI 19-24)";
+       finalIdx = idxH;
+       
+       let sizeH = table[idxH];
+       let maxW = sizeH.w[1];
+       
+       if (w > maxW) {
+          let newIdx = Math.min(table.length - 1, idxH + 1);
+          finalIdx = newIdx;
+          logicExplain = `Theo chiều cao là size ${sizeH.code}, nhưng cân nặng vượt mức tối đa nên tăng 1 size.`;
+       } else {
+          logicExplain = `Cân đối, chọn size theo chiều cao.`;
+       }
+
+    } else {
+       shapeLabel = "Dáng đậm / mập (BMI > 24)";
+       finalIdx = idxW;
+       
+       let sizeW = table[idxW];
+       let maxW = sizeW.w[1];
+       
+       if (w >= maxW) {
+          let newIdx = Math.min(table.length - 1, idxW + 1);
+          if (newIdx !== idxW) {
+             finalIdx = newIdx;
+             logicExplain = `Chọn theo cân nặng (Size ${sizeW.code}), nhưng do chạm ngưỡng tối đa nên tăng 1 size cho thoải mái.`;
+          } else {
+             logicExplain = `Chọn theo cân nặng (Size lớn nhất).`;
+          }
+       } else {
+          logicExplain = `Ưu tiên chọn size theo cân nặng để mặc vừa.`;
+       }
+    }
+    
+    return { idx: finalIdx, idxHeightStandard: idxH, shape, shapeLabel, logicExplain, bmi };
+  }
+
+  function renderBodyResultAdult(h, w, table, selector, whoLabel){
+    const err=$("err"), out=$("result");
+
+    const result = solveSizeAdult(h, w, table);
+    const { idx, idxHeightStandard, shapeLabel, logicExplain, bmi } = result;
+
+    if (idx < 0) {
+       err.textContent = "Không tìm thấy size phù hợp trong bảng.";
+       err.style.display="block"; out.style.display="none"; return false;
+    }
+
+    const sizeChosen = table[idx]; 
+    
+    let targetLenIndex = idxHeightStandard; 
+    const gap = idxHeightStandard - idx; 
+    
+    if (Math.abs(gap) > 2) {
+        targetLenIndex = Math.round((idx + idxHeightStandard) / 2);
+    }
+    
+    const sizeTargetLen = table[targetLenIndex]; 
+
+    let cutText = "";
+    let cutExplain = "";
+    
+    if(typeof sizeChosen.len === "number" && typeof sizeTargetLen.len === "number"){
+        const delta = sizeTargetLen.len - sizeChosen.len; 
+        
+        if(Math.abs(delta) <= 1){
+            cutText = "Giữ nguyên";
+            cutExplain = "Chiều dài áo tương đối phù hợp.";
+        } else if(delta > 0){
+            cutText = `May thêm ~${delta.toFixed(1)}cm`;
+            cutExplain = `Size ${sizeChosen.code} ngắn hơn so với chiều cao ${h}cm.`;
+        } else {
+            cutText = `Cắt lai ${Math.abs(delta).toFixed(1)}cm`;
+            if (Math.abs(gap) > 2) {
+                cutExplain = `Do chênh lệch lớn, nên cắt về chiều dài của size trung gian ${sizeTargetLen.code} để giữ dáng áo.`;
+            } else {
+                cutExplain = `Size ${sizeChosen.code} dài hơn so với chiều cao ${h}cm.`;
+            }
+        }
+    } else {
+        cutText = "Giữ nguyên";
+        cutExplain = "Không đủ dữ liệu chiều dài để tính toán.";
+    }
+
+    let note = "";
+    if(["XS", "5XL", "6XL", "7XL", "8XL"].includes(sizeChosen.code)) {
+       note = `<br><b style="color:#dc2626;">⚠️ Lưu ý: Size ${sizeChosen.code} vui lòng liên hệ để check lại thông số áo chính xác nhất.</b>`;
+    }
+
+    clearHighlight();
+    const tb = document.querySelector(selector);
+    if(tb){
+      if(tb.children[idx]) tb.children[idx].classList.add("pick");
+    }
+
+    out.style.display="block";
+    out.innerHTML = `
+      <div class="hint">Kết quả gợi ý theo <b>chiều cao &amp; cân nặng</b> (${whoLabel}).</div>
+      <div class="suggestion-grid">
+        <div class="sugg-card">
+            <div class="sugg-title">
+            <span class="label">1</span> <b>Size đề xuất</b>
+            </div>
+            <div class="sugg-body">
+            <div>Size đề xuất: <span class="size-badge">${sizeChosen.code}</span></div>
+            <div class="hint score">
+                Phân loại: <b>${shapeLabel}</b><br>
+                BMI: ${bmi.toFixed(1)}
+            </div>
+            <div class="hint" style="margin-top:4px; font-style: italic;">
+               "${logicExplain}"
+            </div>
+            </div>
+        </div>
+
+        <div class="sugg-card">
+            <div class="sugg-title">
+            <span class="label">2</span> <b>Size tuỳ chỉnh</b>
+            </div>
+            <div class="sugg-body">
+            <div>Size tuỳ chỉnh: <span class="size-badge">${sizeChosen.code}</span></div>
+            <div class="cut-main">${cutText}</div>
+            <div class="cut-sub">${cutExplain}</div>
+            </div>
+        </div>
+      </div>
+      <div class="hint" style="margin-top:8px; text-align:center;">${note}</div>
+    `;
+    return {ok:true, pickIdx: idx, cutText};
+  }
+
+  function renderKidsBody(w){
+    // Lấy bảng kids hiện tại
+    const table = getCurrentData();
+
+    const err=$("err"), out=$("result");
+    const idx = findNearestByRange(w, table, 'w', 'max'); 
+    if(idx===-1){
+      err.textContent="Cân nặng nằm ngoài bảng trẻ em.";
+      err.style.display="block"; out.style.display="none"; return false;
+    }
+    clearHighlight();
+    const tb = document.querySelector("#tableBodyKid");
+    if(tb && tb.children[idx]) tb.children[idx].classList.add("pick");
+    const p = table[idx];
+    out.style.display="block";
+    out.innerHTML = `
+      <div class="hint">Kết quả gợi ý theo <b>cân nặng</b> (Trẻ em)</div>
+      <div class="sugg-card" style="margin-top:8px">
+        <div class="sugg-title">
+          <span class="label">1</span> <b>Size đề xuất</b>
+        </div>
+        <div class="sugg-body">
+          <div>Size gợi ý: <span class="size-badge">${p.code}</span></div>
+          <div class="hint" style="margin-top:6px">
+            Khoảng cân nặng: <b>${p.w[0]}–${p.w[1]}kg</b> • Tuổi tham khảo: <b>${p.age}</b>
+          </div>
+        </div>
+      </div>
+    `;
+    return {ok:true, idx};
+  }
+
+  function suggestByBody(){
+    const err=$("err"), out=$("result");
+    err.style.display="none"; err.textContent=""; out.style.display="none";
+
+    const h=parseNum($("height").value);
+    const w=parseNum($("weight").value);
+    const g=$("gender").value;
+    const sport=$("sport").value;
+    const table = getCurrentData();
+
+    if(g==="kids"){
+      if(Number.isNaN(w)){
+        err.textContent="Nhập cân nặng cho trẻ em.";
+        err.style.display="block"; return false;
+      }
+      return !!renderKidsBody(w);
+    } else {
+      if(Number.isNaN(h) || Number.isNaN(w)){
+        err.textContent="Nhập đủ chiều cao và cân nặng.";
+        err.style.display="block"; return false;
+      }
+
+      if(sport === 'baseball') {
+         // Baseball dùng chung bảng Male cho tất cả
+         return !!renderBodyResultAdult(h,w,table,"#tableBodyMale","Unisex/Bóng chày");
+      }
+
+      if(g==="male"){
+        return !!renderBodyResultAdult(h,w,table,"#tableBodyMale","Nam");
+      } else {
+        return !!renderBodyResultAdult(h,w,table,"#tableBodyFemale","Nữ");
+      }
+    }
+  }
+
+  
+  let teamRows = [];
+  let nextRowId = 1;
+
+  function currentTable(){
+     // Wrapper cho getCurrentData để tương thích logic cũ
+     return getCurrentData();
+  }
+
+  function computeTeamByMeasure(){
+    const g = $("gender").value;
+    const sport = $("sport").value;
+    const len = parseNum($("len").value);
+    const chest = parseNum($("chest").value);
+    const sleeve = parseNum($("sleeve").value);
+    const table = getCurrentData();
+
+    if(Number.isNaN(len) && Number.isNaN(chest) && Number.isNaN(sleeve)){
+      return {error:"Nhập ít nhất 1 trong 3 số đo áo."};
+    }
+    const sugg = calcSuggestions(len, chest, sleeve, table);
+    if(!sugg.overall) return {error:"Không đủ dữ liệu để gợi ý size."};
+
+    const idxO = sugg.overall.idx;
+    const idxC = sugg.chest?.idx ?? null;
+    const sizeO = table[idxO];
+
+    let sizeCustomCode = "";
+    let cutText = "";
+    if(idxC!=null){
+      const sc = table[idxC];
+      sizeCustomCode = sc.code;
+      if(!Number.isNaN(len) && typeof sc.len==="number"){
+        const delta = sc.len - len;
+        if(Math.abs(delta)<=1){
+          cutText = "Giữ nguyên";
+        } else if(delta>1){
+          cutText = `Cắt lai ${delta.toFixed(1)}cm`;
+        } else {
+          cutText = `Tăng lai ~${Math.abs(delta).toFixed(1)}cm`;
+        }
+      }
+    }
+
+    return {
+      g,
+      len,chest,sleeve,
+      sizeMain: sizeO.code,
+      sizeCustom: sizeCustomCode,
+      sizeCustomNote: cutText
+    };
+  }
+
+  function computeTeamByBody(){
+    const g = $("gender").value;
+    const h=parseNum($("height").value);
+    const w=parseNum($("weight").value);
+    const table=getCurrentData();
+
+    if(g==="kids"){
+      if(Number.isNaN(w)) return {error:"Nhập cân nặng cho trẻ em."};
+      const idx = findNearestByRange(w, table, 'w', 'max');
+      if(idx===-1) return {error:"Cân nặng nằm ngoài bảng trẻ em."};
+      const size=table[idx].code;
+      return {
+        g,height:h,weight:w,
+        sizeMain:size,
+        sizeCustom:size,
+        sizeCustomNote:""
+      };
+    }
+
+    if(Number.isNaN(h) || Number.isNaN(w)) return {error:"Nhập đủ chiều cao và cân nặng."};
+    
+    // Áp dụng logic BMI
+    const result = solveSizeAdult(h, w, table);
+    if (result.idx < 0) return { error: "Ngoài phạm vi bảng tham chiếu." };
+    
+    const sizeChosen = table[result.idx];
+    
+    // Tính toán cắt lai
+    let targetLenIndex = result.idxHeightStandard; 
+    const gap = result.idxHeightStandard - result.idx;
+    
+    if (Math.abs(gap) > 2) {
+        targetLenIndex = Math.round((result.idx + result.idxHeightStandard) / 2);
+    }
+    const sizeTargetLen = table[targetLenIndex];
+    
+    let cutText = "";
+    if(typeof sizeChosen.len === "number" && typeof sizeTargetLen.len === "number"){
+        const delta = sizeTargetLen.len - sizeChosen.len;
+        if(Math.abs(delta) <= 1){
+            cutText = "Giữ nguyên";
+        } else if(delta > 0){
+            cutText = `May thêm ~${delta.toFixed(1)}cm`;
+        } else {
+            cutText = `Cắt lai ${Math.abs(delta).toFixed(1)}cm`;
+        }
+    } else {
+        cutText = "Giữ nguyên";
+    }
+
+    let note = cutText;
+    if(["XS", "5XL", "6XL", "7XL", "8XL"].includes(sizeChosen.code)) {
+        note += " (Nên check lại)";
+    }
+
+    return {
+      g, height: h, weight: w,
+      sizeMain: sizeChosen.code,
+      sizeCustom: sizeChosen.code,
+      sizeCustomNote: note
+    };
+  }
+
+  function addTeamRow(record){
+    // Thêm sport vào record để biết dòng này thuộc môn nào
+    const sport = $("sport").value;
+    teamRows.push({id:nextRowId++, sport: sport, ...record});
+    renderTeamTable();
+  }
+  function removeTeamMember(id){
+    teamRows = teamRows.filter(r=>r.id!==id);
+    renderTeamTable();
+  }
+
+  function renderTeamTable(){
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+    const head = $("teamHead");
+    const body = $("teamTableBody");
+    body.innerHTML="";
+
+    let headerHtml="";
+    if(mode==="measure"){
+      headerHtml = `
+        <tr>
+          <th>#</th>
+          <th>Tên</th>
+          <th>Môn</th>
+          <th>Số áo</th>
+          <th>Dài áo</th>
+          <th>Ngực</th>
+          <th>Tay</th>
+          <th>Size đề xuất</th>
+          <th>Size tuỳ chỉnh</th>
+          <th></th>
+        </tr>`;
+    } else {
+      headerHtml = `
+        <tr>
+          <th>#</th>
+          <th>Tên</th>
+          <th>Môn</th>
+          <th>Số áo</th>
+          <th>Cao</th>
+          <th>Nặng</th>
+          <th>Size đề xuất</th>
+          <th>Size tuỳ chỉnh</th>
+          <th></th>
+        </tr>`;
+    }
+    head.innerHTML = headerHtml;
+
+    const rows = teamRows.filter(r=>r.mode===mode);
+    rows.forEach((r,idx)=>{
+      const fmt = v => (v==null || Number.isNaN(v)) ? "" : (typeof v==="number" ? v.toFixed(1) : v);
+      // Format tên môn cho ngắn gọn
+      let sportName = r.sport;
+      if(sportName === 'football') sportName = 'Bóng đá';
+      else if(sportName === 'baseball') sportName = 'Bóng chày';
+      
+      let tr=document.createElement("tr");
+      if(mode==="measure"){
+        tr.innerHTML = `
+          <td>${idx+1}</td>
+          <td>${r.name || ""}</td>
+          <td><small>${sportName}</small></td>
+          <td>${r.number || ""}</td>
+          <td>${fmt(r.len)}</td>
+          <td>${fmt(r.chest)}</td>
+          <td>${fmt(r.sleeve)}</td>
+          <td><b>${r.sizeMain || ""}</b></td>
+          <td style="text-align:left">
+            ${r.sizeCustom ? `<b>${r.sizeCustom}</b>` : ""}${r.sizeCustomNote ? ` (${r.sizeCustomNote})` : ""}
+          </td>
+          <td><button type="button" class="btn-del" onclick="removeTeamMember(${r.id})">&times;</button></td>
+        `;
+      } else {
+        tr.innerHTML = `
+          <td>${idx+1}</td>
+          <td>${r.name || ""}</td>
+          <td><small>${sportName}</small></td>
+          <td>${r.number || ""}</td>
+          <td>${fmt(r.height)}</td>
+          <td>${fmt(r.weight)}</td>
+          <td><b>${r.sizeMain || ""}</b></td>
+          <td style="text-align:left">
+            ${r.sizeCustom ? `<b>${r.sizeCustom}</b>` : ""}${r.sizeCustomNote ? ` (${r.sizeCustomNote})` : ""}
+          </td>
+          <td><button type="button" class="btn-del" onclick="removeTeamMember(${r.id})">&times;</button></td>
+        `;
+      }
+      body.appendChild(tr);
+    });
+  }
+
+  function clearTeam(){
+    teamRows = [];
+    renderTeamTable();
+  }
+
+function buildExcelDataForCurrentMode(){
+  const mode = document.querySelector('input[name="mode"]:checked').value;
+  const rows = teamRows.filter(r => r.mode === mode);
+
+  if (!rows.length) {
+    $("err").textContent = "Chưa có dữ liệu đội ở chế độ này để tải/chia sẻ.";
+    $("err").style.display = "block";
+    return null;
+  }
+  $("err").style.display = "none";
+
+  const fmt = v => (v == null || Number.isNaN(v))
+    ? ""
+    : (typeof v === "number" ? v.toFixed(1) : v);
+
+  let header;
+  if (mode === "measure") {
+    header = ["#", "Tên", "Môn", "Số áo", "Dài áo", "Ngực", "Tay", "Size đề xuất", "Size tuỳ chỉnh"];
+  } else {
+    header = ["#", "Tên", "Môn", "Số áo", "Cao", "Nặng", "Size đề xuất", "Size tuỳ chỉnh"];
+  }
+
+  const data = [header];
+
+  rows.forEach((r, idx) => {
+    let sportName = r.sport;
+    if(sportName === 'football') sportName = 'Bóng đá';
+    else if(sportName === 'baseball') sportName = 'Bóng chày';
+
+    if (mode === "measure") {
+      data.push([
+        idx + 1,
+        r.name || "",
+        sportName || "",
+        r.number || "",
+        fmt(r.len),
+        fmt(r.chest),
+        fmt(r.sleeve),
+        r.sizeMain || "",
+        (r.sizeCustom || "") + (r.sizeCustomNote ? " - " + r.sizeCustomNote : "")
+      ]);
+    } else {
+      data.push([
+        idx + 1,
+        r.name || "",
+        sportName || "",
+        r.number || "",
+        fmt(r.height),
+        fmt(r.weight),
+        r.sizeMain || "",
+        (r.sizeCustom || "") + (r.sizeCustomNote ? " - " + r.sizeCustomNote : "")
+      ]);
+    }
+  });
+
+  return { mode, data };
+}
+
+  
+ function downloadCSV(){
+  if (typeof XLSX === "undefined") {
+    alert("Không tìm thấy thư viện XLSX. Không thể tạo file Excel.");
+    return;
+  }
+
+  const built = buildExcelDataForCurrentMode();
+  if (!built) return;
+
+  const { mode, data } = built;
+
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "DanhSachSize");
+
+  const fileName = `bang-size-doi-${mode}.xlsx`;
+
+  XLSX.writeFile(wb, fileName);
+}
+
+function handleSuggest(){
+  const modeRadio = document.querySelector('input[name="mode"]:checked');
+  const currentMode = modeRadio ? modeRadio.value : "measure";
+
+  const name   = $("playerName").value.trim() || "Cầu thủ " + (teamRows.length + 1);
+  const number = $("playerNumber").value.trim();
+
+  const len    = parseNum($("len").value);
+  const chest  = parseNum($("chest").value);
+  const sleeve = parseNum($("sleeve").value);
+  const h      = parseNum($("height").value);
+  const w      = parseNum($("weight").value);
+
+  const hasMeasure = (!Number.isNaN(len) && !Number.isNaN(chest));
+  
+  // Logic Kids body: only needs weight
+  let hasBody = (!Number.isNaN(h) && !Number.isNaN(w));
+  const g = $("gender").value;
+  if(g==="kids") {
+      hasBody = !Number.isNaN(w);
+  }
+
+  if (!hasMeasure && !hasBody) {
+    if(g==="kids") $("err").textContent = "Vui lòng nhập: Cân nặng.";
+    else $("err").textContent = "Vui lòng nhập: (Dài áo + Ngang ngực) HOẶC (Chiều cao + Cân nặng).";
+    
+    $("err").style.display = "block";
+    $("result").style.display = "none";
+    return;
+  }
+
+  let finalMode;
+  if (hasMeasure && hasBody) {
+    finalMode = currentMode; 
+  } else if (hasMeasure) {
+    finalMode = "measure";
+  } else {
+    finalMode = "body";
+  }
+
+  let rec, ok;
+
+  if (finalMode === "measure") {
+    rec = computeTeamByMeasure();
+    if (rec.error) {
+      $("err").textContent = rec.error;
+      $("err").style.display = "block";
+      $("result").style.display = "none";
+      return;
+    }
+
+    ok = suggestByMeasure();
+    if (!ok) return;
+
+    $("err").style.display = "none";
+    addTeamRow({ mode: "measure", name, number, ...rec });
+  } else {
+    rec = computeTeamByBody();
+    if (rec.error) {
+      $("err").textContent = rec.error;
+      $("err").style.display = "block";
+      $("result").style.display = "none";
+      return;
+    }
+
+    ok = suggestByBody();
+    if (!ok) return;
+
+    $("err").style.display = "none";
+    addTeamRow({ mode: "body", name, number, ...rec });
+  }
+}
+
+
+  
+  function clearAll(){
+    ["len","chest","sleeve","weight","height","playerName","playerNumber"].forEach(id=>{
+      const el=$(id); if(el) el.value="";
+    });
+    $("err").style.display="none"; $("err").textContent="";
+    $("result").style.display="none"; $("result").innerHTML="";
+    clearHighlight();
+  }
+  
+  function parseGenderLabel(label){
+    const s = (label || "").toString().trim().toLowerCase();
+    if(!s) return $("gender").value || "male";
+    if(s.startsWith("nữ") || s.startsWith("nu")) return "female";
+    if(s.startsWith("tr")) return "kids";
+    return "male";
+  }
+
+  function downloadExcelTemplate(){
+    if(typeof XLSX === "undefined"){
+      alert("Không tìm thấy thư viện XLSX.");
+      return;
+    }
+
+    const mode = document.querySelector('input[name="mode"]:checked').value;
+    let data, fileName;
+
+    if(mode === "measure"){
+      data = [
+        ["Tên", "Số áo", "Đối tượng", "Dài áo", "Ngực", "Tay"],
+        ["Ví dụ: Nam 1", 10, "Nam / Nữ / Trẻ em", 70, 52, 22]
+      ];
+      fileName = "Mau_nhap_thong_so_ao.xlsx";
+    } else {
+      data = [
+        ["Tên", "Số áo", "Đối tượng", "Chiều cao", "Cân nặng"],
+        ["Ví dụ: Nam 1", 10, "Nam / Nữ", 172, 68]
+      ];
+      fileName = "Mau_nhap_cao_can_nang.xlsx";
+    }
+
+    const ws = XLSX.utils.aoa_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Nhap size");
+    XLSX.writeFile(wb, fileName);
+  }
+
+  function computeByMeasureFor(g, len, chest, sleeve){
+    // Lấy table hiện tại dựa trên sport đang chọn ở UI
+    // Lưu ý: Khi import excel, ta đang giả định user muốn dùng bảng size của môn đang chọn trên màn hình
+    const table = getCurrentData();
+
+    if(Number.isNaN(len) && Number.isNaN(chest) && Number.isNaN(sleeve)){
+      return { error: "Thiếu 3 số đo áo." };
+    }
+
+    const sugg = calcSuggestions(len, chest, sleeve, table);
+    if(!sugg.overall) return { error: "Không đủ dữ liệu để gợi ý size." };
+
+    const idxO = sugg.overall.idx;
+    const idxC = sugg.chest?.idx ?? null;
+    const sizeO = table[idxO];
+
+    let sizeCustomCode = "";
+    let cutText = "";
+    if(idxC != null){
+      const sc = table[idxC];
+      sizeCustomCode = sc.code;
+      if(!Number.isNaN(len) && typeof sc.len === "number"){
+        const delta = sc.len - len;
+        if(Math.abs(delta) <= 1){
+          cutText = "Giữ nguyên";
+        } else if(delta > 0){
+          cutText = `Tăng lai ~${delta.toFixed(1)}cm`;
+        } else {
+          cutText = `Cắt lai ${Math.abs(delta).toFixed(1)}cm`;
+        }
+      }
+    }
+
+    return {
+      g,
+      len, chest, sleeve,
+      sizeMain: sizeO.code,
+      sizeCustom: sizeCustomCode,
+      sizeCustomNote: cutText
+    };
+  }
+
+  function computeByBodyFor(g, h, w){
+    const table = getCurrentData();
+
+    if(g === "kids"){
+      if(Number.isNaN(w)) return { error: "Thiếu cân nặng trẻ em." };
+      const idx = table.findIndex(s => inRange(w, s.w));
+      if(idx === -1) return { error: "Cân nặng nằm ngoài bảng trẻ em." };
+      const size = table[idx].code;
+      return {
+        g, height: h, weight: w,
+        sizeMain: size,
+        sizeCustom: size,
+        sizeCustomNote: ""
+      };
+    }
+
+    if(Number.isNaN(h) || Number.isNaN(w)){
+      return { error: "Thiếu chiều cao hoặc cân nặng." };
+    }
+
+    // Áp dụng logic BMI
+    const result = solveSizeAdult(h, w, table);
+    if (result.idx < 0) return { error: "Ngoài phạm vi bảng tham chiếu." };
+    
+    const sizeChosen = table[result.idx];
+    
+    // Tính toán cắt lai
+    let targetLenIndex = result.idxHeightStandard; 
+    const gap = result.idxHeightStandard - result.idx;
+    
+    if (Math.abs(gap) > 2) {
+        targetLenIndex = Math.round((result.idx + result.idxHeightStandard) / 2);
+    }
+    const sizeTargetLen = table[targetLenIndex];
+    
+    let cutText = "";
+    if(typeof sizeChosen.len === "number" && typeof sizeTargetLen.len === "number"){
+        const delta = sizeTargetLen.len - sizeChosen.len;
+        if(Math.abs(delta) <= 1){
+            cutText = "Giữ nguyên";
+        } else if(delta > 0){
+            cutText = `May thêm ~${delta.toFixed(1)}cm`;
+        } else {
+            cutText = `Cắt lai ${Math.abs(delta).toFixed(1)}cm`;
+        }
+    } else {
+        cutText = "Giữ nguyên";
+    }
+
+    let note = cutText;
+    if(["XS", "5XL", "6XL", "7XL", "8XL"].includes(sizeChosen.code)) {
+        note += " (Nên check lại)";
+    }
+
+    return {
+      g, height: h, weight: w,
+      sizeMain: sizeChosen.code,
+      sizeCustom: sizeChosen.code,
+      sizeCustomNote: note
+    };
+  }
+
+  function handleImportExcel(evt){
+    const file = evt.target.files[0];
+    if(!file) return;
+
+    if(typeof XLSX === "undefined"){
+      alert("Không tìm thấy thư viện XLSX.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e){
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type: "array" });
+      const sheet = workbook.Sheets[workbook.SheetNames[0]];
+      const json = XLSX.utils.sheet_to_json(sheet, { defval: "" });
+
+      const mode = document.querySelector('input[name="mode"]:checked').value;
+      let added = 0;
+
+      json.forEach(row => {
+        const name = (row["Tên"] || row["Ten"] || row["Name"] || "").toString().trim();
+        const number = (row["Số áo"] || row["So ao"] || row["So"] || row["Number"] || "").toString().trim();
+        const genderLabel = row["Đối tượng"] || row["Doi tuong"] || row["Gender"] || "";
+        const g = parseGenderLabel(genderLabel);
+
+        if(mode === "measure"){
+          const len   = parseNum(row["Dài áo"] || row["Dai ao"] || "");
+          const chest = parseNum(row["Ngực"]   || row["Nguc"]   || "");
+          const sleeve= parseNum(row["Tay"]    || "");
+
+          const rec = computeByMeasureFor(g, len, chest, sleeve);
+          if(rec.error) return;
+
+          addTeamRow({
+            mode: "measure",
+            name: name || ("Cầu thủ " + (teamRows.length + 1)),
+            number,
+            ...rec
+          });
+          added++;
+        } else {
+          const h = parseNum(row["Chiều cao"] || row["Chieu cao"] || row["Cao"] || "");
+          const w = parseNum(row["Cân nặng"]  || row["Can nang"]  || row["Nặng"] || "");
+
+          const rec = computeByBodyFor(g, h, w);
+          if(rec.error) return;
+
+          addTeamRow({
+            mode: "body",
+            name: name || ("Cầu thủ " + (teamRows.length + 1)),
+            number,
+            ...rec
+          });
+          added++;
+        }
+      });
+
+      if(!added){
+        alert("Không có dòng hợp lệ trong file Excel (kiểm tra tên cột & dữ liệu).");
+      } else {
+        $("err").style.display = "none";
+      }
+
+      evt.target.value = "";
+    };
+
+    reader.readAsArrayBuffer(file);
+  }
+
+  
+  ["len","chest","sleeve","weight","height"].forEach(id=>{
+    const el=$(id); if(!el) return;
+    el.addEventListener("keydown",e=>{
+      if(e.key==="Enter"){ e.preventDefault(); handleSuggest(); }
+    });
+  });
+lucide.createIcons();
+
+async function shareExcel() {
+
+  const ua = navigator.userAgent || "";
+  const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+
+  if (!isIOS || !navigator.share) {
+    showShareGuide();
+    return;
+  }
+
+  if (typeof XLSX === "undefined") {
+    alert("Không tìm thấy thư viện XLSX. Không thể tạo file để chia sẻ.");
+    return;
+  }
+
+  const built = buildExcelDataForCurrentMode();
+  if (!built) return;
+
+  const { mode, data } = built;
+
+  const ws = XLSX.utils.aoa_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "DanhSachSize");
+
+  const fileName = `danhsach-size-doi-${mode}.xlsx`;
+  const wbout = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+
+  const blob = new Blob(
+    [wbout],
+    { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }
+  );
+  const file = new File([blob], fileName, { type: blob.type });
+
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try {
+      await navigator.share({
+        title: "Danh sách size đội",
+        text: "File Excel danh sách size từ công cụ.",
+        files: [file],
+      });
+      return;
+    } catch (e) {
+      console.log("User canceled share:", e);
+
+      return;
+    }
+  }
+
+  showShareGuide();
+}
+
+function openGuide(){
+  $("excelGuidePopup").style.display = "flex";
+}
+function closeGuide(){
+  $("excelGuidePopup").style.display = "none";
+}
+function showShareGuide(){
+  document.getElementById("shareGuidePopup").style.display = "flex";
+}
+
+function closeShareGuide(){
+  document.getElementById("shareGuidePopup").style.display = "none";
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  const shareBtn = document.getElementById("shareButton");
+  if (!shareBtn) return;
+
+  shareBtn.classList.remove("hidden");
+});
+
+// Init trigger để hiển thị đúng bảng ban đầu
+handleSportChange();
+
+</script>
+</body>
+</html>
